@@ -9,7 +9,12 @@ namespace Inoxico.TechnicalQuestions.Answers
             int P = 0, Q = -1, R = -1;
             for (int i = 1; i < points.Count() / sizeof(int); i++)
             {
-                depth += points[i];
+                if(Q < 0 && points[i] >= points[i - 1])
+                  Q = i - 1;
+                if ((Q >= 0 && R < 0) &&(points[i] <= points[i - 1] || i + 1 == points.Count() / sizeof(int)))
+                {
+
+                }
             }
             return depth;
         }
