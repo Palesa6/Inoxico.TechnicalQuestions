@@ -21,6 +21,8 @@ namespace Inoxico.TechnicalQuestions.Answers
                     P = i - 1;
                     Q = R = -1;
                 }
+                if (depth == 0)
+                    depth = -1;
             }
             return depth;
         }
