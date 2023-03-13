@@ -13,7 +13,13 @@ namespace Inoxico.TechnicalQuestions.Answers
                   Q = i - 1;
                 if ((Q >= 0 && R < 0) &&(points[i] <= points[i - 1] || i + 1 == points.Count() / sizeof(int)))
                 {
-
+                    if (points[i] <= points[i - 1])
+                        R = i - 1;
+                    else
+                        R = i;
+                    depth = (points[P] - points[Q], points[R] - points[Q]).Item2 + 1;
+                    P = i - 1;
+                    Q = R = -1;
                 }
             }
             return depth;
