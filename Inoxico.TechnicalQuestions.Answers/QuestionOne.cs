@@ -12,11 +12,11 @@ namespace Inoxico.TechnicalQuestions.Answers
 
             foreach (string strSentence in arrAllSentences)
             {
-                string[] arrWords = strSentence.Split(new char[] { ' ', ',', '.', '?', '!' }, StringSplitOptions.RemoveEmptyEntries);
-                if (WordsCount < arrWords.Length)
+                string[] Words = strSentence.Split(new char[] { ' ', ',', '.', '?', '!' }, StringSplitOptions.RemoveEmptyEntries);
+                if (WordsCount < Words.Length)
                 {
-                    WordsCount = arrWords.Length;
-                    sentencewithwords = strSentence + ".";
+                    WordsCount = Words.Length;
+                    sentencewithwords = strSentence ;
                 }
             }
 
